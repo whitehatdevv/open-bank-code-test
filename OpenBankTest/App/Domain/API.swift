@@ -9,6 +9,9 @@ import Foundation
 
 enum API: String {
 
-	case basicURL = ""
+	case basicURL = "https://gateway.marvel.com:443/v1/public"
+	enum Characters: String {
+		case list = ""
+	}
 
 }
