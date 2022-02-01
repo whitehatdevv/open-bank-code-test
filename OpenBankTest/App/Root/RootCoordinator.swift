@@ -30,7 +30,7 @@ class RootCoordinator {
 	// MARK: - Methods
 	func run() {
 		let scene = factory.createMainScene(client, wireframe: self)
-		window.rootViewController = scene
+		window.rootViewController = container
 		window.makeKeyAndVisible()
 		navigationController.viewControllers = [scene]
 		container.activate(navigationController)
