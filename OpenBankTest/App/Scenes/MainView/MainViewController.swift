@@ -11,7 +11,7 @@ import UIKit
 class MainViewController: UIViewController {
 
 	// MARK: - Dependencies
-	var model: MainViewViewModel?
+	var model: MainViewInputProtocol?
 
 	// MARK: - Inits
 	init() {
@@ -22,8 +22,27 @@ class MainViewController: UIViewController {
 		fatalError("init(coder:) has not been implemented")
 	}
 
+	// MARK: - View lifecycle
+	override func viewDidLoad() {
+		super.viewDidLoad()
+		setupViews()
+	}
+
+	override func viewWillAppear(_ animated: Bool) {
+		super.viewWillAppear(animated)
+		model?.viewWillAppear()
+	}
 
 	// MARK: - Methods
+
+}
+
+// MARK: - Configure the view
+extension MainViewController {
+
+	func setupViews() {
+		view.backgroundColor = .red
+	}
 
 }
 
