@@ -75,7 +75,7 @@ open class OpenBankAPIClient {
 }
 
 //MARK: - Extending ExampleAPIClient to implement's methods
-extension ExampleAPIClient: APIClient {
+extension OpenBankAPIClient: APIClient {
 
 	@discardableResult
 	public func send<T>(_ request: T, completion: @escaping (Result<T.APIResponse, Error>) -> Void) -> Cancelable where T : APIRequest {
