@@ -10,7 +10,7 @@ import Networking
 
 struct RootFactory {
 
-	func createMainScene(_ client: APIClient, wireframe: MainViewWireframe) {
+	func createMainScene(_ client: APIClient, wireframe: MainViewWireframe) -> MainViewController {
 		let scene = MainViewController()
 		let provider = MainViewDataProvider(client)
 		let model = MainViewViewModel(scene, wireframe: wireframe, provider: provider)

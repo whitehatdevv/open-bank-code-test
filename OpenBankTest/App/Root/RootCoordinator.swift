@@ -29,7 +29,17 @@ class RootCoordinator {
 
 	// MARK: - Methods
 	func run() {
-		
+		let scene = factory.createMainScene(client, wireframe: self)
+		window.rootViewController = scene
+		window.makeKeyAndVisible()
+		navigationController.viewControllers = [scene]
+		container.activate(navigationController)
 	}
+
+}
+
+// MARK: - Implementing routing from Main View
+extension RootCoordinator: MainViewWireframe {
+
 
 }
