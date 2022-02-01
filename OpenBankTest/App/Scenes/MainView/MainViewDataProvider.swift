@@ -8,6 +8,16 @@
 import Foundation
 import Networking
 
+//class CharactersRequest: JSONAPIRequest {
+//
+//	// MARK: - Properties
+//	var decoder: JSONDecoder = JSONDecoder()
+//	typealias APIResponse = <#T##Type###>
+//	var resourcePath: String
+//
+//
+//}
+
 class MainViewDataProvider {
 
 	// MARK: - Dependencies
@@ -16,6 +26,11 @@ class MainViewDataProvider {
 	// MARK: - Inits
 	init(_ client: APIClient) {
 		self.client = client
+	}
+
+	// MARK: - Methods
+	func getCharacters(completion: @escaping(Result<[String], Error>) -> Void) {
+
 	}
 
 }
