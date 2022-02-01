@@ -12,13 +12,17 @@ import UIKit
 class RootCoordinator {
 
 	// MARK: - Dependencies
+	private var window: UIWindow
 	private var client: APIClient
 	private var navigationController: UINavigationController
 	private var factory: RootFactory
+	private var container: RootContainer
 
 	// MARK: - Inits
-	init(_ factory: RootFactory, client: APIClient, navigationController: UINavigationController = UINavigationController()) {
+	init(_ window: UIWindow, factory: RootFactory, container: RootContainer, client: APIClient, navigationController: UINavigationController = UINavigationController()) {
+		self.window = window
 		self.factory = factory
+		self.container = container
 		self.client = client
 		self.navigationController = navigationController
 	}

@@ -20,9 +20,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
 		// Create the first instance and start the scene
 		let rootFactory = RootFactory()
+		let container = RootContainer()
 		guard let url = URL(string: API.basicURL.rawValue) else { return }
 		let apiClient = OpenBankAPIClient(url)
-		rootCoordinator = RootCoordinator(rootFactory, client: apiClient)
+		rootCoordinator = RootCoordinator(window!, factory: rootFactory, container: container, client: apiClient)
 		rootCoordinator?.run()
 	}
 
