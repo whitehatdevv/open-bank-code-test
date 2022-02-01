@@ -22,6 +22,9 @@
 		1B586CBC27A97164005B2E30 /* Debugger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B586CBB27A97164005B2E30 /* Debugger.swift */; };
 		1B586CBE27A9717B005B2E30 /* DebuggerContracts+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B586CBD27A9717B005B2E30 /* DebuggerContracts+Utilities.swift */; };
 		1B586CC227A971A8005B2E30 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B586CC127A971A8005B2E30 /* MainViewController.swift */; };
+		1B586CC427A97202005B2E30 /* MainViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B586CC327A97202005B2E30 /* MainViewViewModel.swift */; };
+		1B586CC627A97219005B2E30 /* MainViewContracts+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B586CC527A97219005B2E30 /* MainViewContracts+Utilities.swift */; };
+		1B586CC827A97299005B2E30 /* MainViewDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B586CC727A97299005B2E30 /* MainViewDataProvider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +64,9 @@
 		1B586CBB27A97164005B2E30 /* Debugger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Debugger.swift; sourceTree = "<group>"; };
 		1B586CBD27A9717B005B2E30 /* DebuggerContracts+Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DebuggerContracts+Utilities.swift"; sourceTree = "<group>"; };
 		1B586CC127A971A8005B2E30 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		1B586CC327A97202005B2E30 /* MainViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewViewModel.swift; sourceTree = "<group>"; };
+		1B586CC527A97219005B2E30 /* MainViewContracts+Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainViewContracts+Utilities.swift"; sourceTree = "<group>"; };
+		1B586CC727A97299005B2E30 /* MainViewDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewDataProvider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -196,6 +202,9 @@
 			isa = PBXGroup;
 			children = (
 				1B586CC127A971A8005B2E30 /* MainViewController.swift */,
+				1B586CC327A97202005B2E30 /* MainViewViewModel.swift */,
+				1B586CC527A97219005B2E30 /* MainViewContracts+Utilities.swift */,
+				1B586CC727A97299005B2E30 /* MainViewDataProvider.swift */,
 			);
 			path = MainView;
 			sourceTree = "<group>";
@@ -369,12 +378,15 @@
 			files = (
 				1B586C7627A96C5E005B2E30 /* AppDelegate.swift in Sources */,
 				1B586CBC27A97164005B2E30 /* Debugger.swift in Sources */,
+				1B586CC627A97219005B2E30 /* MainViewContracts+Utilities.swift in Sources */,
 				1B586CB727A96F74005B2E30 /* RootFactory.swift in Sources */,
 				1B586CBE27A9717B005B2E30 /* DebuggerContracts+Utilities.swift in Sources */,
 				1B586CB227A96F16005B2E30 /* RootContainer.swift in Sources */,
+				1B586CC827A97299005B2E30 /* MainViewDataProvider.swift in Sources */,
 				1B586CAF27A96F04005B2E30 /* RootCoordinator.swift in Sources */,
 				1B586CC227A971A8005B2E30 /* MainViewController.swift in Sources */,
 				1B586CB927A97048005B2E30 /* API.swift in Sources */,
+				1B586CC427A97202005B2E30 /* MainViewViewModel.swift in Sources */,
 				1B586C7827A96C5E005B2E30 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
