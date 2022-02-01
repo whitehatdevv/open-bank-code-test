@@ -49,6 +49,7 @@
 		1B586C9227A96C60005B2E30 /* OpenBankTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OpenBankTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B586C9627A96C60005B2E30 /* OpenBankTestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenBankTestUITests.swift; sourceTree = "<group>"; };
 		1B586C9827A96C60005B2E30 /* OpenBankTestUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenBankTestUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		1B586CA627A96CD0005B2E30 /* Networking */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Networking; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +107,7 @@
 				1B586C7E27A96C60005B2E30 /* Assets.xcassets */,
 				1B586C8027A96C60005B2E30 /* LaunchScreen.storyboard */,
 				1B586C8327A96C60005B2E30 /* Info.plist */,
+				1B586CA527A96CBA005B2E30 /* Modules */,
 			);
 			path = OpenBankTest;
 			sourceTree = "<group>";
@@ -125,6 +127,14 @@
 				1B586C9827A96C60005B2E30 /* OpenBankTestUITestsLaunchTests.swift */,
 			);
 			path = OpenBankTestUITests;
+			sourceTree = "<group>";
+		};
+		1B586CA527A96CBA005B2E30 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				1B586CA627A96CD0005B2E30 /* Networking */,
+			);
+			path = Modules;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
