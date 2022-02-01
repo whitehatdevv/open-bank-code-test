@@ -20,6 +20,8 @@
 		1B586CB527A96F2E005B2E30 /* Networking in Frameworks */ = {isa = PBXBuildFile; productRef = 1B586CB427A96F2E005B2E30 /* Networking */; };
 		1B586CB727A96F74005B2E30 /* RootFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B586CB627A96F74005B2E30 /* RootFactory.swift */; };
 		1B586CB927A97048005B2E30 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B586CB827A97048005B2E30 /* API.swift */; };
+		1B586CBC27A97164005B2E30 /* Debugger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B586CBB27A97164005B2E30 /* Debugger.swift */; };
+		1B586CBE27A9717B005B2E30 /* DebuggerContracts+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B586CBD27A9717B005B2E30 /* DebuggerContracts+Utilities.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +59,8 @@
 		1B586CB127A96F16005B2E30 /* RootContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootContainer.swift; sourceTree = "<group>"; };
 		1B586CB627A96F74005B2E30 /* RootFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootFactory.swift; sourceTree = "<group>"; };
 		1B586CB827A97048005B2E30 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		1B586CBB27A97164005B2E30 /* Debugger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Debugger.swift; sourceTree = "<group>"; };
+		1B586CBD27A9717B005B2E30 /* DebuggerContracts+Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DebuggerContracts+Utilities.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +148,7 @@
 		1B586CA727A96EA2005B2E30 /* App */ = {
 			isa = PBXGroup;
 			children = (
+				1B586CBA27A97158005B2E30 /* Managers */,
 				1B586CAB27A96EC6005B2E30 /* Core */,
 				1B586CAA27A96EB2005B2E30 /* Resources */,
 				1B586CA927A96EAC005B2E30 /* Domain */,
@@ -210,6 +215,23 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1B586CBA27A97158005B2E30 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				1B586CBF27A97181005B2E30 /* Debugger */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		1B586CBF27A97181005B2E30 /* Debugger */ = {
+			isa = PBXGroup;
+			children = (
+				1B586CBB27A97164005B2E30 /* Debugger.swift */,
+				1B586CBD27A9717B005B2E30 /* DebuggerContracts+Utilities.swift */,
+			);
+			path = Debugger;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -347,7 +369,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				1B586C7627A96C5E005B2E30 /* AppDelegate.swift in Sources */,
+				1B586CBC27A97164005B2E30 /* Debugger.swift in Sources */,
 				1B586CB727A96F74005B2E30 /* RootFactory.swift in Sources */,
+				1B586CBE27A9717B005B2E30 /* DebuggerContracts+Utilities.swift in Sources */,
 				1B586CB227A96F16005B2E30 /* RootContainer.swift in Sources */,
 				1B586CAF27A96F04005B2E30 /* RootCoordinator.swift in Sources */,
 				1B586CB927A97048005B2E30 /* API.swift in Sources */,
