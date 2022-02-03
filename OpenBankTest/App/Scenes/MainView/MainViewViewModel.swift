@@ -22,6 +22,7 @@ class MainViewViewModel {
 	// MARK: - Properties
 	private var state: MainViewState = .loading {
 		didSet {
+			Debugger.printLog(.debug, message: "State updated: \(state)")
 			view?.update(state)
 		}
 	}
@@ -41,14 +42,16 @@ class MainViewViewModel {
 
 	// MARK: - Methods
 	func transformData(_ dto: [CharacterDTO]) {
-		#warning("Pending to implement")
+		let dom = dto.map { Character.init($0) }
+		self.state = .data(dom)
 	}
 
 	func getCharacters() {
 		provider.getCharacters(paging: paging) { result in
 			switch result {
 			case .success(let dto):
-				self.transformData(dto)
+				Debugger.printLog(.debug, message: " CHARACTERS REQUEST => Offset: \(dto.offset) && Limit: \(dto.limit) && Total: \(dto.total)")
+				self.transformData(dto.characters)
 			case .failure(let error):
 				self.state = .error(error)
 			}

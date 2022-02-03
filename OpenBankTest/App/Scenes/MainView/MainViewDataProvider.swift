@@ -28,9 +28,7 @@ struct ThumbnailDTO: Codable {
 }
 
 struct CharacterDTO: Decodable {
-
-	// MARK: - Properties
-	let id: String
+	let id: Int
 	let name: String
 	let description: String
 	let thumbnail: ThumbnailDTO
@@ -39,41 +37,40 @@ struct CharacterDTO: Decodable {
 	let series: ContentDTO
 	let stories: ContentDTO
 	let events: ContentDTO
+}
 
-	// MARK: - Used coding keys
+struct CharactersRequestResponse: Decodable {
+
+	// MARK: - Properties
+	let offset: Int
+	let limit: Int
+	let total: Int
+	let characters: [CharacterDTO]
+
+	// MARK: - Define coding keys
 	enum CodingKeys: String, CodingKey {
 		case data
-		case result
-		case id
-		case name
-		case description
-		case thumbnail
-		case resourceURI
-		case comics
-		case series
-		case stories
-		case events
+		case offset
+		case limit
+		case total
+		case characters = "results"
 	}
 
-	// MARK: Used decode init to used nested containers
+	// MARK: - Using decode to get nested containers
 	init(from decoder: Decoder) throws {
-		let values = try decoder.container(keyedBy: CodingKeys.self)
-		let results = try values.nestedContainer(keyedBy: CodingKeys.self, forKey: .data).nestedContainer(keyedBy: CodingKeys.self, forKey: .result)
-		self.id = try results.decode(String.self, forKey: .id)
-		self.name = try results.decode(String.self, forKey: .name)
-		self.description = try results.decode(String.self, forKey: .description)
-		self.thumbnail = try results.decode(ThumbnailDTO.self, forKey: .thumbnail)
-		self.resourceURI = try results.decode(String.self, forKey: .resourceURI)
-		self.comics = try results.decode(ContentDTO.self, forKey: .comics)
-		self.series = try results.decode(ContentDTO.self, forKey: .series)
-		self.stories = try results.decode(ContentDTO.self, forKey: .stories)
-		self.events = try results.decode(ContentDTO.self, forKey: .events)
+		let container = try decoder.container(keyedBy: CodingKeys.self)
+		let response = try container.nestedContainer(keyedBy: CodingKeys.self, forKey: .data)
+		self.offset = try response.decode(Int.self, forKey: .offset)
+		self.limit = try response.decode(Int.self, forKey: .limit)
+		self.total = try response.decode(Int.self, forKey: .total)
+		self.characters = try response.decode([CharacterDTO].self, forKey: .characters)
 	}
+	
 
 }
 
 // MARK: - Request definition
-class CharactersRequest: Environment<[CharacterDTO]> {
+class CharactersRequest: Environment<CharactersRequestResponse> {
 	// MARK: -- Inits
 	init(_ paging: Paging? = nil) {
 		var query = [URLQueryItem]()
@@ -105,7 +102,7 @@ class MainViewDataProvider {
 	}
 
 	// MARK: - Methods
-	func getCharacters(paging: Paging, completion: @escaping(Result<[CharacterDTO], Error>) -> Void) {
+	func getCharacters(paging: Paging, completion: @escaping(Result<CharactersRequestResponse, Error>) -> Void) {
 		let request = CharactersRequest(paging)
 		client.send(request, completion: completion)
 	}
