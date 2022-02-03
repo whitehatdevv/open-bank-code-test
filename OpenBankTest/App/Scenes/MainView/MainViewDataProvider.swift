@@ -42,8 +42,13 @@ struct CharacterDTO: Codable {
 // MARK: - Request definition
 class CharactersRequest: Environment<[CharacterDTO]> {
 	// MARK: -- Inits
-	init(parameters: [URLQueryItem] = []) {
-		super.init(API.Characters.list.rawValue)
+	init(_ paging: Paging? = nil) {
+		var query = [URLQueryItem]()
+		if let parameters = paging {
+			query.append(URLQueryItem(name: "offset", value: "\(parameters.offset)"))
+			query.append(URLQueryItem(name: "limit", value: "\(parameters.limit)"))
+		}
+		super.init(API.Characters.list.rawValue, queryItems: query)
 	}
 }
 
@@ -61,7 +66,7 @@ class MainViewDataProvider {
 
 	// MARK: - Methods
 	func getCharacters(paging: Paging, completion: @escaping(Result<[CharacterDTO], Error>) -> Void) {
-		let request = CharactersRequest()
+		let request = CharactersRequest(paging)
 		client.send(request, completion: completion)
 	}
 
