@@ -14,6 +14,7 @@
 		1B17E4FD27ABEDD900C8BCD9 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B17E4FC27ABEDD900C8BCD9 /* Item.swift */; };
 		1B17E4FF27ABEE3100C8BCD9 /* Content.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B17E4FE27ABEE3100C8BCD9 /* Content.swift */; };
 		1B17E50127AC177200C8BCD9 /* UITableView+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B17E50027AC177100C8BCD9 /* UITableView+Utilities.swift */; };
+		1B17E50427AC218600C8BCD9 /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B17E50327AC218600C8BCD9 /* MainTableViewCell.swift */; };
 		1B586C7627A96C5E005B2E30 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B586C7527A96C5E005B2E30 /* AppDelegate.swift */; };
 		1B586C7827A96C5E005B2E30 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B586C7727A96C5E005B2E30 /* SceneDelegate.swift */; };
 		1B586C7F27A96C60005B2E30 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B586C7E27A96C60005B2E30 /* Assets.xcassets */; };
@@ -59,6 +60,8 @@
 		1B17E4FC27ABEDD900C8BCD9 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		1B17E4FE27ABEE3100C8BCD9 /* Content.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Content.swift; sourceTree = "<group>"; };
 		1B17E50027AC177100C8BCD9 /* UITableView+Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Utilities.swift"; sourceTree = "<group>"; };
+		1B17E50327AC218600C8BCD9 /* MainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
+		1B17E50527AC23F400C8BCD9 /* OpenBankComponents */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = OpenBankComponents; sourceTree = "<group>"; };
 		1B586C7227A96C5E005B2E30 /* OpenBankTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OpenBankTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B586C7527A96C5E005B2E30 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1B586C7727A96C5E005B2E30 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -137,6 +140,14 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		1B17E50227AC214800C8BCD9 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				1B17E50327AC218600C8BCD9 /* MainTableViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		1B586C6927A96C5E005B2E30 = {
 			isa = PBXGroup;
 			children = (
@@ -188,6 +199,7 @@
 		1B586CA527A96CBA005B2E30 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				1B17E50527AC23F400C8BCD9 /* OpenBankComponents */,
 				1B586CA627A96CD0005B2E30 /* Networking */,
 			);
 			path = Modules;
@@ -237,6 +249,7 @@
 		1B586CAC27A96ED2005B2E30 /* MainView */ = {
 			isa = PBXGroup;
 			children = (
+				1B17E50227AC214800C8BCD9 /* Cells */,
 				1B586CC127A971A8005B2E30 /* MainViewController.swift */,
 				1B586CC327A97202005B2E30 /* MainViewViewModel.swift */,
 				1B586CC527A97219005B2E30 /* MainViewContracts+Utilities.swift */,
@@ -427,6 +440,7 @@
 				1B17E4ED27ABD25500C8BCD9 /* Environment.swift in Sources */,
 				1B17E4F327ABD41300C8BCD9 /* String+Utilities.swift in Sources */,
 				1B586CC227A971A8005B2E30 /* MainViewController.swift in Sources */,
+				1B17E50427AC218600C8BCD9 /* MainTableViewCell.swift in Sources */,
 				1B586CB927A97048005B2E30 /* API.swift in Sources */,
 				1B17E50127AC177200C8BCD9 /* UITableView+Utilities.swift in Sources */,
 				1B586CC427A97202005B2E30 /* MainViewViewModel.swift in Sources */,

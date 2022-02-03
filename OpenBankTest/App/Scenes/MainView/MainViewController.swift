@@ -13,6 +13,14 @@ class MainViewController: UIViewController {
 	// MARK: - Dependencies
 	var model: MainViewInputProtocol?
 
+	// MARK: - Properties
+	private let tableView = UITableView(frame: .zero, style: .insetGrouped)
+	private var data = [Character]() {
+		didSet {
+			tableView.reloadData()
+		}
+	}
+
 	// MARK: - Inits
 	init() {
 		super.init(nibName: nil, bundle: nil)
@@ -41,7 +49,52 @@ class MainViewController: UIViewController {
 extension MainViewController {
 
 	func setupViews() {
-		view.backgroundColor = .red
+
+		view.backgroundColor = .systemYellow
+		navigationItem.title = "Characters"
+
+		tableView.backgroundColor = .clear
+		tableView.delegate = self
+		tableView.dataSource = self
+		tableView.register(MainTableViewCell.self, forCellReuseIdentifier: MainTableViewCell.cellId)
+
+		view.addSubview(tableView)
+		NSLayoutConstraint.activate([
+			tableView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+			tableView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
+			tableView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
+			tableView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor)
+		])
+
+	}
+
+}
+
+// MARK: - UITableView Data Source
+extension MainViewController: UITableViewDataSource {
+
+	func numberOfSections(in tableView: UITableView) -> Int {
+		data.count
+	}
+
+	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+		return 1
+	}
+
+	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+		let cell = tableView.dequeueReusableCell(withIdentifier: MainTableViewCell.cellId, for: indexPath)
+		cell.textLabel?.text = data[indexPath.section].name
+		return cell
+	}
+
+}
+
+// MARK: - Implementing UITableView Delegate
+extension MainViewController: UITableViewDelegate {
+
+	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+		Debugger.printLog(.debug, message: "Tapped on cell \(indexPath.section)")
+		model?.tapOnCell(indexPath.section)
 	}
 
 }
@@ -52,11 +105,12 @@ extension MainViewController: MainViewOutputProtocol {
 	func update(_ state: MainViewState) {
 		switch state {
 		case .loading:
-			print("Loading")
+			self.tableView.setBackgound(to: .loading)
 		case .error(let error):
-			print("Error")
-		case .data(let array):
-			print("Data")
+			self.tableView.setBackgound(to: .error(error.localizedDescription))
+		case .data(let dom):
+			self.tableView.setBackgound(to: .normal)
+			self.data = dom
 		}
 	}
 

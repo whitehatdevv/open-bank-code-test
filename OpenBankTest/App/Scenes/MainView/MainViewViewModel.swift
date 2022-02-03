@@ -20,6 +20,7 @@ class MainViewViewModel {
 	private var provider: MainViewDataProvider
 
 	// MARK: - Properties
+	private var dom = [Character]()
 	private var state: MainViewState = .loading {
 		didSet {
 			Debugger.printLog(.debug, message: "State updated: \(state)")
@@ -42,7 +43,7 @@ class MainViewViewModel {
 
 	// MARK: - Methods
 	func transformData(_ dto: [CharacterDTO]) {
-		let dom = dto.map { Character.init($0) }
+		dom = dto.map { Character.init($0) }
 		self.state = .data(dom)
 	}
 
@@ -70,6 +71,10 @@ extension MainViewViewModel: MainViewInputProtocol {
 
 	func paging(multiply by: Int) {
 		paging.offset = by
+	}
+
+	func tapOnCell(_ index: Int) {
+		wireframe?.goToDetail(dom[index].id)
 	}
 
 }

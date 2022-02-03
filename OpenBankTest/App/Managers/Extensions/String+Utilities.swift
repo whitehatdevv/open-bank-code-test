@@ -8,6 +8,8 @@
 import Foundation
 import CryptoKit
 
+extension String: Error { }
+
 extension String {
 	/// MD5 property to convert a fully string to MD5 used for API Utilities
 	var MD5: String {

@@ -24,6 +24,10 @@ protocol MainViewInputProtocol {
 	///  - By: Indicates the paging we need actually
 	/// - Important: It works directly with the table view
 	func paging(multiply by: Int)
+	/// Called when a cell is tapped on
+	/// - Parameters:
+	///  - index: Indicates the index where the cell is taped on
+	func tapOnCell(_ index: Int)
 }
 
 // MARK: - Routing navigation from Main View
@@ -31,7 +35,7 @@ protocol MainViewWireframe: AnyObject {
 	/// Tells to the coordinator that we need to instance the detail view for a specific character
 	/// - Parameters:
 	///  - id: Indicates the id from the `Character` DOM object
-	func goToDetail(_ id: String)
+	func goToDetail(_ id: Int)
 }
 
 // MARK: - States used to configure the main view
