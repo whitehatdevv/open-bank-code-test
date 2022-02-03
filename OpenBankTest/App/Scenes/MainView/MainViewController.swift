@@ -56,7 +56,6 @@ extension MainViewController {
 		tableView.backgroundColor = .clear
 		tableView.delegate = self
 		tableView.dataSource = self
-		tableView.register(MainTableViewCell.self, forCellReuseIdentifier: MainTableViewCell.cellId)
 
 		view.addSubview(tableView)
 		NSLayoutConstraint.activate([
@@ -82,9 +81,7 @@ extension MainViewController: UITableViewDataSource {
 	}
 
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-		let cell = tableView.dequeueReusableCell(withIdentifier: MainTableViewCell.cellId, for: indexPath)
-		cell.textLabel?.text = data[indexPath.section].name
-		return cell
+		return UITableViewCell()
 	}
 
 }
