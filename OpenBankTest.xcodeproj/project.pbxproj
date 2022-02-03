@@ -13,6 +13,7 @@
 		1B17E4FA27ABED8800C8BCD9 /* Thumbnail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B17E4F927ABED8700C8BCD9 /* Thumbnail.swift */; };
 		1B17E4FD27ABEDD900C8BCD9 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B17E4FC27ABEDD900C8BCD9 /* Item.swift */; };
 		1B17E4FF27ABEE3100C8BCD9 /* Content.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B17E4FE27ABEE3100C8BCD9 /* Content.swift */; };
+		1B17E50127AC177200C8BCD9 /* UITableView+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B17E50027AC177100C8BCD9 /* UITableView+Utilities.swift */; };
 		1B586C7627A96C5E005B2E30 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B586C7527A96C5E005B2E30 /* AppDelegate.swift */; };
 		1B586C7827A96C5E005B2E30 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B586C7727A96C5E005B2E30 /* SceneDelegate.swift */; };
 		1B586C7F27A96C60005B2E30 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B586C7E27A96C60005B2E30 /* Assets.xcassets */; };
@@ -57,6 +58,7 @@
 		1B17E4F927ABED8700C8BCD9 /* Thumbnail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Thumbnail.swift; sourceTree = "<group>"; };
 		1B17E4FC27ABEDD900C8BCD9 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		1B17E4FE27ABEE3100C8BCD9 /* Content.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Content.swift; sourceTree = "<group>"; };
+		1B17E50027AC177100C8BCD9 /* UITableView+Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Utilities.swift"; sourceTree = "<group>"; };
 		1B586C7227A96C5E005B2E30 /* OpenBankTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OpenBankTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B586C7527A96C5E005B2E30 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1B586C7727A96C5E005B2E30 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -119,6 +121,7 @@
 			isa = PBXGroup;
 			children = (
 				1B17E4F227ABD41300C8BCD9 /* String+Utilities.swift */,
+				1B17E50027AC177100C8BCD9 /* UITableView+Utilities.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -425,6 +428,7 @@
 				1B17E4F327ABD41300C8BCD9 /* String+Utilities.swift in Sources */,
 				1B586CC227A971A8005B2E30 /* MainViewController.swift in Sources */,
 				1B586CB927A97048005B2E30 /* API.swift in Sources */,
+				1B17E50127AC177200C8BCD9 /* UITableView+Utilities.swift in Sources */,
 				1B586CC427A97202005B2E30 /* MainViewViewModel.swift in Sources */,
 				1B17E4FA27ABED8800C8BCD9 /* Thumbnail.swift in Sources */,
 				1B586C7827A96C5E005B2E30 /* SceneDelegate.swift in Sources */,
