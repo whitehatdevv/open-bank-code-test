@@ -13,6 +13,7 @@ protocol MainViewOutputProtocol: AnyObject {
 
 protocol MainViewInputProtocol {
 	func viewWillAppear()
+	func paging(multiply by: Int)
 }
 
 protocol MainViewWireframe: AnyObject {

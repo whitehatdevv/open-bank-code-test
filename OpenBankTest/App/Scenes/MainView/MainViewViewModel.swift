@@ -7,6 +7,11 @@
 
 import Foundation
 
+struct Paging {
+	let limit: Int = 20
+	var offset: Int
+}
+
 class MainViewViewModel {
 
 	// MARK: - Dependencies
@@ -21,6 +26,12 @@ class MainViewViewModel {
 		}
 	}
 
+	private var paging: Paging = .init(offset: 0) {
+		didSet {
+			getCharacters()
+		}
+	}
+
 	// MARK: - Inits
 	init(_ view: MainViewOutputProtocol, wireframe: MainViewWireframe, provider: MainViewDataProvider) {
 		self.view = view
@@ -29,8 +40,19 @@ class MainViewViewModel {
 	}
 
 	// MARK: - Methods
-	func getCharacters() {
+	func transformData(_ dto: [CharacterDTO]) {
+		#warning("Pending to implement")
+	}
 
+	func getCharacters() {
+		provider.getCharacters(paging: paging) { result in
+			switch result {
+			case .success(let dto):
+				self.transformData(dto)
+			case .failure(let error):
+				self.state = .error(error)
+			}
+		}
 	}
 
 }
@@ -40,6 +62,10 @@ extension MainViewViewModel: MainViewInputProtocol {
 
 	func viewWillAppear() {
 		getCharacters()
+	}
+
+	func paging(multiply by: Int) {
+		paging.offset = by
 	}
 
 }

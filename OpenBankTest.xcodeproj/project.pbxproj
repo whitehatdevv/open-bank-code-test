@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		1B17E4ED27ABD25500C8BCD9 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B17E4EC27ABD25500C8BCD9 /* Environment.swift */; };
 		1B17E4F327ABD41300C8BCD9 /* String+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B17E4F227ABD41300C8BCD9 /* String+Utilities.swift */; };
+		1B17E4F827ABEB1000C8BCD9 /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B17E4F727ABEB1000C8BCD9 /* Character.swift */; };
 		1B586C7627A96C5E005B2E30 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B586C7527A96C5E005B2E30 /* AppDelegate.swift */; };
 		1B586C7827A96C5E005B2E30 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B586C7727A96C5E005B2E30 /* SceneDelegate.swift */; };
 		1B586C7F27A96C60005B2E30 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B586C7E27A96C60005B2E30 /* Assets.xcassets */; };
@@ -49,6 +50,7 @@
 /* Begin PBXFileReference section */
 		1B17E4EC27ABD25500C8BCD9 /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
 		1B17E4F227ABD41300C8BCD9 /* String+Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Utilities.swift"; sourceTree = "<group>"; };
+		1B17E4F727ABEB1000C8BCD9 /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
 		1B586C7227A96C5E005B2E30 /* OpenBankTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OpenBankTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B586C7527A96C5E005B2E30 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1B586C7727A96C5E005B2E30 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -113,6 +115,14 @@
 				1B17E4F227ABD41300C8BCD9 /* String+Utilities.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		1B17E4F627ABEAF000C8BCD9 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1B17E4F727ABEB1000C8BCD9 /* Character.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		1B586C6927A96C5E005B2E30 = {
@@ -197,6 +207,7 @@
 			isa = PBXGroup;
 			children = (
 				1B586CB827A97048005B2E30 /* API.swift */,
+				1B17E4F627ABEAF000C8BCD9 /* Models */,
 				1B17E4EB27ABD23100C8BCD9 /* Environment */,
 			);
 			path = Domain;
@@ -394,6 +405,7 @@
 				1B586CBC27A97164005B2E30 /* Debugger.swift in Sources */,
 				1B586CC627A97219005B2E30 /* MainViewContracts+Utilities.swift in Sources */,
 				1B586CB727A96F74005B2E30 /* RootFactory.swift in Sources */,
+				1B17E4F827ABEB1000C8BCD9 /* Character.swift in Sources */,
 				1B586CBE27A9717B005B2E30 /* DebuggerContracts+Utilities.swift in Sources */,
 				1B586CB227A96F16005B2E30 /* RootContainer.swift in Sources */,
 				1B586CC827A97299005B2E30 /* MainViewDataProvider.swift in Sources */,

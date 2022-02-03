@@ -8,11 +8,27 @@
 import Foundation
 import Networking
 
-struct CharactersDTO: Codable {
-
+struct CharacterThumbnailDTO: Codable {
+	let path: String
+	let `extension`: String
 }
 
-class CharactersRequest: Environment<[CharactersDTO]> {
+struct CharacterDTO: Codable {
+
+	struct CharactersAvailableDTO: Codable {
+		let available: Int
+	}
+
+	let id: String
+	let name: String
+	let thumbnail: CharacterThumbnailDTO
+	let comics: CharactersAvailableDTO
+	let series: CharactersAvailableDTO
+	let stories: CharactersAvailableDTO
+	let events: CharactersAvailableDTO
+}
+
+class CharactersRequest: Environment<[CharacterDTO]> {
 	// MARK: -- Inits
 	init(parameters: [URLQueryItem] = []) {
 		super.init(API.Characters.list.rawValue)
@@ -30,7 +46,7 @@ class MainViewDataProvider {
 	}
 
 	// MARK: - Methods
-	func getCharacters(completion: @escaping(Result<[CharactersDTO], Error>) -> Void) {
+	func getCharacters(paging: Paging, completion: @escaping(Result<[CharacterDTO], Error>) -> Void) {
 		let request = CharactersRequest()
 		client.send(request, completion: completion)
 	}
