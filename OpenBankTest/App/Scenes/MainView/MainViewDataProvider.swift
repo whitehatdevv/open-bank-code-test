@@ -8,6 +8,7 @@
 import Foundation
 import Networking
 
+// MARK: - Used DTOs
 struct ItemsDTO: Codable {
 	let resourceURI: String
 	let name: String
@@ -38,6 +39,7 @@ struct CharacterDTO: Codable {
 	let events: ContentDTO
 }
 
+// MARK: - Request definition
 class CharactersRequest: Environment<[CharacterDTO]> {
 	// MARK: -- Inits
 	init(parameters: [URLQueryItem] = []) {
@@ -45,6 +47,8 @@ class CharactersRequest: Environment<[CharacterDTO]> {
 	}
 }
 
+
+// MARK: - Provider definition
 class MainViewDataProvider {
 
 	// MARK: - Dependencies
