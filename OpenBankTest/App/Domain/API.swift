@@ -18,9 +18,9 @@ struct Constants {
 // MARK: - Dynamic structure to create the needed resource paths
 enum API: String {
 
-	case basicURL = "https://gateway.marvel.com:443/v1/public"
+	case basicURL = "https://gateway.marvel.com:443/v1/public/"
 	enum Characters: String {
-		case list = ""
+		case list = "characters"
 	}
 
 }
