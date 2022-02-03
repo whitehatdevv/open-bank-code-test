@@ -64,6 +64,7 @@ class MainViewViewModel {
 extension MainViewViewModel: MainViewInputProtocol {
 
 	func viewWillAppear() {
+		view?.update(state)
 		getCharacters()
 	}
 
