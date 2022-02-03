@@ -27,7 +27,9 @@ struct ThumbnailDTO: Codable {
 	let `extension`: String
 }
 
-struct CharacterDTO: Codable {
+struct CharacterDTO: Decodable {
+
+	// MARK: - Properties
 	let id: String
 	let name: String
 	let description: String
@@ -37,6 +39,37 @@ struct CharacterDTO: Codable {
 	let series: ContentDTO
 	let stories: ContentDTO
 	let events: ContentDTO
+
+	// MARK: - Used coding keys
+	enum CodingKeys: String, CodingKey {
+		case data
+		case result
+		case id
+		case name
+		case description
+		case thumbnail
+		case resourceURI
+		case comics
+		case series
+		case stories
+		case events
+	}
+
+	// MARK: Used decode init to used nested containers
+	init(from decoder: Decoder) throws {
+		let values = try decoder.container(keyedBy: CodingKeys.self)
+		let results = try values.nestedContainer(keyedBy: CodingKeys.self, forKey: .data).nestedContainer(keyedBy: CodingKeys.self, forKey: .result)
+		self.id = try results.decode(String.self, forKey: .id)
+		self.name = try results.decode(String.self, forKey: .name)
+		self.description = try results.decode(String.self, forKey: .description)
+		self.thumbnail = try results.decode(ThumbnailDTO.self, forKey: .thumbnail)
+		self.resourceURI = try results.decode(String.self, forKey: .resourceURI)
+		self.comics = try results.decode(ContentDTO.self, forKey: .comics)
+		self.series = try results.decode(ContentDTO.self, forKey: .series)
+		self.stories = try results.decode(ContentDTO.self, forKey: .stories)
+		self.events = try results.decode(ContentDTO.self, forKey: .events)
+	}
+
 }
 
 // MARK: - Request definition
@@ -50,6 +83,13 @@ class CharactersRequest: Environment<[CharacterDTO]> {
 		}
 		super.init(API.Characters.list.rawValue, queryItems: query)
 	}
+
+	func generateHeaders() -> [String : String] {
+		return [
+			"Content-type": "application/json"
+		]
+	}
+
 }
 
 

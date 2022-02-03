@@ -8,7 +8,7 @@
 import Foundation
 import Networking
 
-class Environment<T: Codable>: JSONAPIRequest {
+class Environment<T: Decodable>: JSONAPIRequest {
 
 	// MARK: - Properties
 	public var decoder: JSONDecoder
@@ -24,11 +24,11 @@ class Environment<T: Codable>: JSONAPIRequest {
 	}
 
 	// MARK: - Methods
-	private func getTimestamp() -> Date {
-		Date.now
+	private func getTimestamp() -> String {
+		UUID().uuidString
 	}
 
-	private func getHash(_ ts: Date) -> String {
+	private func getHash(_ ts: String) -> String {
 		"\(ts)\(Constants.APIKeys.private)\(Constants.APIKeys.public)".MD5
 	}
 
@@ -36,7 +36,7 @@ class Environment<T: Codable>: JSONAPIRequest {
 		let ts = getTimestamp()
 		return [
 			URLQueryItem(name: "ts", value: "\(String(describing: ts))"),
-			URLQueryItem(name: "apiKey", value: ""),
+			URLQueryItem(name: "apikey", value: "8783cd3adef6c1cd4b28ed778ad23227"),
 			URLQueryItem(name: "hash", value: getHash(ts))
 		] + queryItems
 	}
