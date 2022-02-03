@@ -41,5 +41,8 @@ class RootCoordinator {
 // MARK: - Implementing routing from Main View
 extension RootCoordinator: MainViewWireframe {
 
+	func goToDetail(_ id: String) {
+		#warning("Implement navigation to detail")
+	}
 
 }
