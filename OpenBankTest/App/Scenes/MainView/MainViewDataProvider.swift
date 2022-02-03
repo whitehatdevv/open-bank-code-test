@@ -8,24 +8,34 @@
 import Foundation
 import Networking
 
-struct CharacterThumbnailDTO: Codable {
+struct ItemsDTO: Codable {
+	let resourceURI: String
+	let name: String
+	let type: String?
+}
+
+struct ContentDTO: Codable {
+	let available: Int
+	let collectionURI: String
+	let items: [ItemsDTO]
+	let returned: Int
+}
+
+struct ThumbnailDTO: Codable {
 	let path: String
 	let `extension`: String
 }
 
 struct CharacterDTO: Codable {
-
-	struct CharactersAvailableDTO: Codable {
-		let available: Int
-	}
-
 	let id: String
 	let name: String
-	let thumbnail: CharacterThumbnailDTO
-	let comics: CharactersAvailableDTO
-	let series: CharactersAvailableDTO
-	let stories: CharactersAvailableDTO
-	let events: CharactersAvailableDTO
+	let description: String
+	let thumbnail: ThumbnailDTO
+	let resourceURI: String
+	let comics: ContentDTO
+	let series: ContentDTO
+	let stories: ContentDTO
+	let events: ContentDTO
 }
 
 class CharactersRequest: Environment<[CharacterDTO]> {
