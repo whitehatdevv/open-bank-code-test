@@ -23,5 +23,5 @@ protocol MainViewWireframe: AnyObject {
 enum MainViewState {
 	case loading
 	case error(Error)
-	case data([Any])
+	case data([Character])
 }
