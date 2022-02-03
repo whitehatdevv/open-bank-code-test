@@ -25,6 +25,10 @@ class RootContainer: UIViewController {
 	}
 
 	//MARK: - Methods
+
+	/// Activate the container inserting the main point of the application
+	/// - Parameters:
+	///  - scene: `UIViewController` of whatever subclass of it.
 	func activate(_ scene: UIViewController) {
 
 		if current != nil {

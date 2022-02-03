@@ -7,6 +7,7 @@
 
 import Foundation
 
+// MARK: - Constants with the needed credentials
 struct Constants {
 	struct APIKeys {
 		static let `public` = "8783cd3adef6c1cd4b28ed778ad23227"
@@ -14,6 +15,7 @@ struct Constants {
 	}
 }
 
+// MARK: - Dynamic structure to create the needed resource paths
 enum API: String {
 
 	case basicURL = "https://gateway.marvel.com:443/v1/public"
