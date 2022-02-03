@@ -8,15 +8,18 @@
 import Foundation
 import Networking
 
-//class CharactersRequest: JSONAPIRequest {
-//
-//	// MARK: - Properties
-//	var decoder: JSONDecoder = JSONDecoder()
-//	typealias APIResponse = <#T##Type###>
-//	var resourcePath: String
-//
-//
-//}
+struct CharactersDTO: Codable {
+
+}
+
+class CharactersRequest: Environment<[CharactersDTO]> {
+
+	// MARK: -- Inits
+	init(parameters: [URLQueryItem] = []) {
+		super.init(API.Characters.list.rawValue)
+	}
+
+}
 
 class MainViewDataProvider {
 
@@ -29,8 +32,9 @@ class MainViewDataProvider {
 	}
 
 	// MARK: - Methods
-	func getCharacters(completion: @escaping(Result<[String], Error>) -> Void) {
-
+	func getCharacters(completion: @escaping(Result<[CharactersDTO], Error>) -> Void) {
+		let request = CharactersRequest()
+		client.send(request, completion: completion)
 	}
 
 }

@@ -8,17 +8,19 @@
 import Foundation
 import Networking
 
-open class Environment<T: Codable>: JSONAPIRequest {
+class Environment<T: Codable>: JSONAPIRequest {
 
 	// MARK: - Properties
 	public var decoder: JSONDecoder
 	public var resourcePath: String
+	var queryItems: [URLQueryItem]
 	public typealias APIResponse = T
 
 	// MARK: - Inits
-	init(_ resourcePath: String, decoder: JSONDecoder = JSONDecoder()) {
+	init(_ resourcePath: String, queryItems: [URLQueryItem] = [], decoder: JSONDecoder = JSONDecoder()) {
 		self.resourcePath = resourcePath
 		self.decoder = decoder
+		self.queryItems = queryItems
 	}
 
 	// MARK: - Methods
@@ -36,7 +38,7 @@ open class Environment<T: Codable>: JSONAPIRequest {
 			URLQueryItem(name: "ts", value: "\(String(describing: ts))"),
 			URLQueryItem(name: "apiKey", value: ""),
 			URLQueryItem(name: "hash", value: getHash(ts))
-		]
+		] + queryItems
 	}
 
 }
