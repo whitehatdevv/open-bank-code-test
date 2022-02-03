@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1B17E4ED27ABD25500C8BCD9 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B17E4EC27ABD25500C8BCD9 /* Environment.swift */; };
+		1B17E4F327ABD41300C8BCD9 /* String+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B17E4F227ABD41300C8BCD9 /* String+Utilities.swift */; };
 		1B586C7627A96C5E005B2E30 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B586C7527A96C5E005B2E30 /* AppDelegate.swift */; };
 		1B586C7827A96C5E005B2E30 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B586C7727A96C5E005B2E30 /* SceneDelegate.swift */; };
 		1B586C7F27A96C60005B2E30 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B586C7E27A96C60005B2E30 /* Assets.xcassets */; };
@@ -45,6 +47,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1B17E4EC27ABD25500C8BCD9 /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
+		1B17E4F227ABD41300C8BCD9 /* String+Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Utilities.swift"; sourceTree = "<group>"; };
 		1B586C7227A96C5E005B2E30 /* OpenBankTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OpenBankTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B586C7527A96C5E005B2E30 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1B586C7727A96C5E005B2E30 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -95,6 +99,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1B17E4EB27ABD23100C8BCD9 /* Environment */ = {
+			isa = PBXGroup;
+			children = (
+				1B17E4EC27ABD25500C8BCD9 /* Environment.swift */,
+			);
+			path = Environment;
+			sourceTree = "<group>";
+		};
+		1B17E4F127ABD40300C8BCD9 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				1B17E4F227ABD41300C8BCD9 /* String+Utilities.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		1B586C6927A96C5E005B2E30 = {
 			isa = PBXGroup;
 			children = (
@@ -155,11 +175,12 @@
 			isa = PBXGroup;
 			children = (
 				1B586CBA27A97158005B2E30 /* Managers */,
-				1B586CAB27A96EC6005B2E30 /* Core */,
 				1B586CAA27A96EB2005B2E30 /* Resources */,
 				1B586CA927A96EAC005B2E30 /* Domain */,
 				1B586CA827A96EA7005B2E30 /* Scenes */,
 				1B586CAD27A96EDF005B2E30 /* Root */,
+				1B586C7527A96C5E005B2E30 /* AppDelegate.swift */,
+				1B586C7727A96C5E005B2E30 /* SceneDelegate.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -176,6 +197,7 @@
 			isa = PBXGroup;
 			children = (
 				1B586CB827A97048005B2E30 /* API.swift */,
+				1B17E4EB27ABD23100C8BCD9 /* Environment */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -187,15 +209,6 @@
 				1B586C7E27A96C60005B2E30 /* Assets.xcassets */,
 			);
 			path = Resources;
-			sourceTree = "<group>";
-		};
-		1B586CAB27A96EC6005B2E30 /* Core */ = {
-			isa = PBXGroup;
-			children = (
-				1B586C7527A96C5E005B2E30 /* AppDelegate.swift */,
-				1B586C7727A96C5E005B2E30 /* SceneDelegate.swift */,
-			);
-			name = Core;
 			sourceTree = "<group>";
 		};
 		1B586CAC27A96ED2005B2E30 /* MainView */ = {
@@ -229,6 +242,7 @@
 		1B586CBA27A97158005B2E30 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				1B17E4F127ABD40300C8BCD9 /* Extensions */,
 				1B586CBF27A97181005B2E30 /* Debugger */,
 			);
 			path = Managers;
@@ -384,6 +398,8 @@
 				1B586CB227A96F16005B2E30 /* RootContainer.swift in Sources */,
 				1B586CC827A97299005B2E30 /* MainViewDataProvider.swift in Sources */,
 				1B586CAF27A96F04005B2E30 /* RootCoordinator.swift in Sources */,
+				1B17E4ED27ABD25500C8BCD9 /* Environment.swift in Sources */,
+				1B17E4F327ABD41300C8BCD9 /* String+Utilities.swift in Sources */,
 				1B586CC227A971A8005B2E30 /* MainViewController.swift in Sources */,
 				1B586CB927A97048005B2E30 /* API.swift in Sources */,
 				1B586CC427A97202005B2E30 /* MainViewViewModel.swift in Sources */,
