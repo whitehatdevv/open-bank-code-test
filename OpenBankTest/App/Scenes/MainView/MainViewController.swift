@@ -49,5 +49,15 @@ extension MainViewController {
 // MARK: - Implementing output from the view
 extension MainViewController: MainViewOutputProtocol {
 
+	func update(_ state: MainViewState) {
+		switch state {
+		case .loading:
+			print("Loading")
+		case .error(let error):
+			print("Error")
+		case .data(let array):
+			print("Data")
+		}
+	}
 
 }

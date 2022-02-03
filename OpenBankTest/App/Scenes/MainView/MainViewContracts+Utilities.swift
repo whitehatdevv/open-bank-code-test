@@ -8,7 +8,7 @@
 import Foundation
 
 protocol MainViewOutputProtocol: AnyObject {
-
+	func update(_ state: MainViewState)
 }
 
 protocol MainViewInputProtocol {
@@ -17,4 +17,10 @@ protocol MainViewInputProtocol {
 
 protocol MainViewWireframe: AnyObject {
 	
+}
+
+enum MainViewState {
+	case loading
+	case error(Error)
+	case data([Any])
 }

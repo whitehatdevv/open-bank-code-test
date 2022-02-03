@@ -13,12 +13,10 @@ struct CharactersDTO: Codable {
 }
 
 class CharactersRequest: Environment<[CharactersDTO]> {
-
 	// MARK: -- Inits
 	init(parameters: [URLQueryItem] = []) {
 		super.init(API.Characters.list.rawValue)
 	}
-
 }
 
 class MainViewDataProvider {
