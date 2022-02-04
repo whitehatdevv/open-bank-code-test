@@ -48,3 +48,4 @@ enum MainViewState {
 	/// This case pass data directly to the view using a `View` object to be configured
 	case data([CharacterCellViewModel])
 }
+

@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import OpenBankComponents
 
 struct Character {
 
@@ -29,6 +30,15 @@ struct Character {
 		self.series = Content.init(dto.series)
 		self.stories = Content.init(dto.stories)
 		self.events = Content.init(dto.events)
+	}
+
+}
+
+// MARK: - Extending character to set property
+extension Character {
+
+	var asCharacterCellViewModel: CharacterCellViewModel {
+		CharacterCellViewModel(title: self.name, mainImage: Data(), comics: BubbleModel(item: self.comics.available), series: BubbleModel(item: self.series.available), stories: BubbleModel(item: self.stories.available), events: BubbleModel(item: self.events.available))
 	}
 
 }

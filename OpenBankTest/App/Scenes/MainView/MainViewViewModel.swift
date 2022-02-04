@@ -45,9 +45,7 @@ class MainViewViewModel {
 	// MARK: - Methods
 	func transformData(_ dto: [CharacterDTO]) {
 		dom = dto.map { Character.init($0) }
-		let viewObject = dom.map {
-			CharacterCellViewModel(title: $0.name, mainImage: Data(), comics: BubbleModel(item: $0.comics.available), series: BubbleModel(item: $0.series.available), stories: BubbleModel(item: $0.stories.available), events: BubbleModel(item: $0.events.available))
-		}
+		let viewObject = dom.map { $0.asCharacterCellViewModel }
 		self.state = .data(viewObject)
 	}
 
