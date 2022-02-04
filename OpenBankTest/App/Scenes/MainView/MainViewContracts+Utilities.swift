@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import OpenBankComponents
 
 // MARK: - Comunication between Model => View
 protocol MainViewOutputProtocol: AnyObject {
@@ -44,6 +45,6 @@ enum MainViewState {
 	case loading
 	/// An error has been detecting during some communication from ViewModel => View
 	case error(Error)
-	/// This case pass data directly to the view using a `DOM` object to be configured
-	case data([Character])
+	/// This case pass data directly to the view using a `View` object to be configured
+	case data([CharacterCellViewModel])
 }

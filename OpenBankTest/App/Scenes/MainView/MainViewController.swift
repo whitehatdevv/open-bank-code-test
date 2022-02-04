@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import OpenBankComponents
 
 class MainViewController: UIViewController {
 
@@ -15,7 +16,7 @@ class MainViewController: UIViewController {
 
 	// MARK: - Properties
 	private let tableView = UITableView(frame: .zero, style: .insetGrouped)
-	private var data = [Character]() {
+	private var data = [CharacterCellViewModel]() {
 		didSet {
 			tableView.reloadData()
 		}
@@ -77,11 +78,15 @@ extension MainViewController: UITableViewDataSource {
 	}
 
 	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-		return 1
+		1
 	}
 
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-		return UITableViewCell()
+		guard let cell = tableView.dequeueReusableCell(withIdentifier: CharactersTableViewCell.identifier) as? CharactersTableViewCell else {
+			fatalError("Identifier not found, have you registered it?")
+		}
+		cell.bind(data[indexPath.section])
+		return cell
 	}
 
 }

@@ -12,10 +12,10 @@ class ImageDownloader {
 
 	/// Downlaod image from BEND service thoughout URL
 	/// - Parameters:
+	///  - imageURLString: String of the Image `URL`
 	///  - completion: Closure that returns a value with the UIImage data
-	static func downloadImage(completion: @escaping(UIImage?) -> ()) {
-
-		if let secureImage = self.imageUrl {
+	static func downloadImage(imageURLString: String, completion: @escaping(UIImage?) -> ()) {
+		if let secureImage = URL(string: imageURLString) {
 			// make request in background
 			DispatchQueue.global(qos: .background).async {
 				URLSession.shared.dataTask(with: URLRequest(url: secureImage)) { data, response, error in
