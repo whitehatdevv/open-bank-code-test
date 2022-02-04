@@ -38,6 +38,8 @@
 		1BEE9D2027AD38710034CEDB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1BEE9D1F27AD38710034CEDB /* Assets.xcassets */; };
 		1BEE9D2327AD38710034CEDB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1BEE9D2127AD38710034CEDB /* LaunchScreen.storyboard */; };
 		1BEE9D2A27AD38BC0034CEDB /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BEE9D2927AD38BC0034CEDB /* RootViewController.swift */; };
+		1BEE9D2E27AD55B00034CEDB /* BubblesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BEE9D2D27AD55B00034CEDB /* BubblesViewController.swift */; };
+		1BEE9D3027AD58320034CEDB /* OpenBankComponents in Frameworks */ = {isa = PBXBuildFile; productRef = 1BEE9D2F27AD58320034CEDB /* OpenBankComponents */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,6 +97,7 @@
 		1BEE9D2227AD38710034CEDB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1BEE9D2427AD38710034CEDB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1BEE9D2927AD38BC0034CEDB /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
+		1BEE9D2D27AD55B00034CEDB /* BubblesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubblesViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +128,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1BEE9D3027AD58320034CEDB /* OpenBankComponents in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -330,6 +334,7 @@
 		1BEE9D2B27AD38FD0034CEDB /* SampleScenes */ = {
 			isa = PBXGroup;
 			children = (
+				1BEE9D2D27AD55B00034CEDB /* BubblesViewController.swift */,
 			);
 			path = SampleScenes;
 			sourceTree = "<group>";
@@ -415,6 +420,9 @@
 			dependencies = (
 			);
 			name = OpenBankComponentsSample;
+			packageProductDependencies = (
+				1BEE9D2F27AD58320034CEDB /* OpenBankComponents */,
+			);
 			productName = OpenBankComponentsSample;
 			productReference = 1BEE9D1427AD386E0034CEDB /* OpenBankComponentsSample.app */;
 			productType = "com.apple.product-type.application";
@@ -549,6 +557,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1BEE9D2E27AD55B00034CEDB /* BubblesViewController.swift in Sources */,
 				1BEE9D1727AD386E0034CEDB /* AppDelegate.swift in Sources */,
 				1BEE9D2A27AD38BC0034CEDB /* RootViewController.swift in Sources */,
 				1BEE9D1927AD386E0034CEDB /* SceneDelegate.swift in Sources */,
@@ -952,6 +961,10 @@
 		1B586CB427A96F2E005B2E30 /* Networking */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = Networking;
+		};
+		1BEE9D2F27AD58320034CEDB /* OpenBankComponents */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = OpenBankComponents;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
