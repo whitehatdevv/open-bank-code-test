@@ -311,7 +311,7 @@
 				1BEE9D1627AD386E0034CEDB /* AppDelegate.swift */,
 				1BEE9D1827AD386E0034CEDB /* SceneDelegate.swift */,
 				1BEE9D2827AD38A80034CEDB /* Scenes */,
-				1BEE9D1F27AD38710034CEDB /* Assets.xcassets */,
+				1BEE9D2C27AD39050034CEDB /* Resources */,
 				1BEE9D2127AD38710034CEDB /* LaunchScreen.storyboard */,
 				1BEE9D2427AD38710034CEDB /* Info.plist */,
 			);
@@ -322,8 +322,24 @@
 			isa = PBXGroup;
 			children = (
 				1BEE9D2927AD38BC0034CEDB /* RootViewController.swift */,
+				1BEE9D2B27AD38FD0034CEDB /* SampleScenes */,
 			);
 			path = Scenes;
+			sourceTree = "<group>";
+		};
+		1BEE9D2B27AD38FD0034CEDB /* SampleScenes */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = SampleScenes;
+			sourceTree = "<group>";
+		};
+		1BEE9D2C27AD39050034CEDB /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				1BEE9D1F27AD38710034CEDB /* Assets.xcassets */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
