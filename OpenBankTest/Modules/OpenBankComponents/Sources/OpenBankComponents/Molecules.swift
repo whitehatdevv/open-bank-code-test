@@ -13,4 +13,10 @@ public enum Molecules {
 		}
 	}
 
+	public enum Bubbles {
+		public static var Basic: Bubble {
+			return Bubble()
+		}
+	}
+
 }

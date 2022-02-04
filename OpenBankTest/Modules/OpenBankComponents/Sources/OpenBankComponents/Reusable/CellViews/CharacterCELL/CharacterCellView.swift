@@ -15,10 +15,14 @@ public class CharacterCellView: UIView {
 	let imageView = UIImageView(frame: .zero)
 	let title = Atoms.Text.Heading.Primary.bold
 	let contentContainer = Atoms.Flexible.StackView.horizontal
+	let bubbleComics = Molecules.Bubbles.Basic
+	let bubbleSeries = Molecules.Bubbles.Basic
+	let bubbleStories = Molecules.Bubbles.Basic
+	let bubbleEvents = Molecules.Bubbles.Basic
 
 	// MARK: - Computed properties
 	lazy var contentContainerSubviews: [UIView] = {
-		[]
+		[bubbleComics, bubbleSeries, bubbleStories, bubbleEvents]
 	}()
 	lazy var secondContainerSubviews: [UIView] = {
 		[title, contentContainer]
@@ -38,9 +42,13 @@ public class CharacterCellView: UIView {
 	}
 
 	// MARK: - Methods
-	func bind(_ model: CharacterCellViewModel) {
+	public func bind(_ model: CharacterCellViewModel) {
 		title.text = model.title
 		imageView.image = UIImage(data: model.mainImage)
+		bubbleSeries.bind(model.series)
+		bubbleComics.bind(model.comics)
+		bubbleStories.bind(model.stories)
+		bubbleEvents.bind(model.events)
 	}
 	
 }

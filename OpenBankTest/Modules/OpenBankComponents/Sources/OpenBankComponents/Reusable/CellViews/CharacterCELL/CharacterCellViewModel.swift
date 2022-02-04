@@ -12,12 +12,12 @@ public struct CharacterCellViewModel {
 
 	let title: String
 	let mainImage: Data
-	let comics: Int
-	let series: Int
-	let stories: Int
-	let events: Int
+	let comics: BubbleModel
+	let series: BubbleModel
+	let stories: BubbleModel
+	let events: BubbleModel
 
-	public init(title: String, mainImage: Data, comics: Int, series: Int, stories: Int, events: Int) {
+	public init(title: String, mainImage: Data, comics: BubbleModel, series: BubbleModel, stories: BubbleModel, events: BubbleModel) {
 		self.title = title
 		self.mainImage = mainImage
 		self.comics = comics
