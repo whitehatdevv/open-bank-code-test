@@ -41,6 +41,7 @@ extension Bubble {
 		container.addArrangedSubview(item)
 
 		rounded()
+		bordered()
 		fill(container, edges: Tokens.Edges.inputViews)
 
 		NSLayoutConstraint.activate([

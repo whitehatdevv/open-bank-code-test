@@ -34,6 +34,7 @@ public class CharactersTableViewCell: UITableViewCell {
 extension CharactersTableViewCell {
 
 	func setupViews() {
+		shadowed()
 		fill(view)
 	}
 

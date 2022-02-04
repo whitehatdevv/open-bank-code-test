@@ -27,10 +27,6 @@ public extension UIView {
 		layer.masksToBounds = true
 	}
 
-	func circular() {
-		layer.cornerRadius = frame.height / 2
-		layer.masksToBounds = true
-	}
 
 	func bordered(borderColor: UIColor = .clear, borderWidth: CGFloat = 1) {
 		layer.borderColor = borderColor.cgColor

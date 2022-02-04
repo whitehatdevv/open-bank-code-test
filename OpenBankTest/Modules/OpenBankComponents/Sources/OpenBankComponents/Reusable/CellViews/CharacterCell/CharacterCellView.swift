@@ -58,7 +58,7 @@ extension CharacterCellView {
 
 	func setupViews() {
 		imageView.contentMode = .scaleToFill
-		imageView.circular()
+		imageView.rounded()
 		imageView.shadowed()
 
 		secondContainerSubviews.forEach {
