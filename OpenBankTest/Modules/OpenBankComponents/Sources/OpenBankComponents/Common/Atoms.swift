@@ -51,6 +51,16 @@ public enum Atoms {
 				}
 			}
 
+			public enum Secondary {
+				public static var bold: UILabel {
+					let label = UILabel()
+					label.numberOfLines = 0
+					label.backgroundColor = UIColor.clear
+					label.textColor = Tokens.Colors.Font.secondary
+					return label
+				}
+			}
+
 		}
 
 	}

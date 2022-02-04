@@ -10,6 +10,7 @@ import UIKit
 public class CharactersTableViewCell: UITableViewCell {
 
 	// MARK: - Properties
+	public static let identifier = "CharactersTableViewCell.identifier"
 	let view = Molecules.CellViews.CharacterCell
 
 	// MARK: - Inits

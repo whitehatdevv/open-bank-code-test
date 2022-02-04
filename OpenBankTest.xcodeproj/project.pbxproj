@@ -40,6 +40,7 @@
 		1BEE9D2A27AD38BC0034CEDB /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BEE9D2927AD38BC0034CEDB /* RootViewController.swift */; };
 		1BEE9D2E27AD55B00034CEDB /* BubblesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BEE9D2D27AD55B00034CEDB /* BubblesViewController.swift */; };
 		1BEE9D3027AD58320034CEDB /* OpenBankComponents in Frameworks */ = {isa = PBXBuildFile; productRef = 1BEE9D2F27AD58320034CEDB /* OpenBankComponents */; };
+		1BEE9D3227AD642F0034CEDB /* CharacterTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BEE9D3127AD642F0034CEDB /* CharacterTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -98,6 +99,7 @@
 		1BEE9D2427AD38710034CEDB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1BEE9D2927AD38BC0034CEDB /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		1BEE9D2D27AD55B00034CEDB /* BubblesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubblesViewController.swift; sourceTree = "<group>"; };
+		1BEE9D3127AD642F0034CEDB /* CharacterTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -335,6 +337,7 @@
 			isa = PBXGroup;
 			children = (
 				1BEE9D2D27AD55B00034CEDB /* BubblesViewController.swift */,
+				1BEE9D3127AD642F0034CEDB /* CharacterTableViewController.swift */,
 			);
 			path = SampleScenes;
 			sourceTree = "<group>";
@@ -558,6 +561,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1BEE9D2E27AD55B00034CEDB /* BubblesViewController.swift in Sources */,
+				1BEE9D3227AD642F0034CEDB /* CharacterTableViewController.swift in Sources */,
 				1BEE9D1727AD386E0034CEDB /* AppDelegate.swift in Sources */,
 				1BEE9D2A27AD38BC0034CEDB /* RootViewController.swift in Sources */,
 				1BEE9D1927AD386E0034CEDB /* SceneDelegate.swift in Sources */,

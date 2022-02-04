@@ -14,7 +14,8 @@ class RootViewController: UIViewController {
 	// MARK: - Properties
 	private let tableView = UITableView(frame: .zero, style: .plain)
 	private let vc: [(vc: UIViewController, name: String)] = [
-		(vc: BubblesViewController(), name: "Bubbles")
+		(vc: BubblesViewController(), name: "Bubbles"),
+		(vc: CharacterTableViewController(), name: "Character Table")
 	]
 
 	// MARK: - Inits

@@ -39,6 +39,7 @@ public enum Tokens {
 
 		public enum Font {
 			public static let primary = UIColor.white
+			public static let secondary = UIColor.black
 		}
 
 	}
