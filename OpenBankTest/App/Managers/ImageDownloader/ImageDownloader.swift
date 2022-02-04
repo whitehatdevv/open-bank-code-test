@@ -14,7 +14,7 @@ class ImageDownloader {
 	/// - Parameters:
 	///  - imageURLString: String of the Image `URL`
 	///  - completion: Closure that returns a value with the UIImage data
-	static func downloadImage(imageURLString: String, completion: @escaping(UIImage?) -> ()) {
+	static func downloadImage(imageURLString: String, completion: @escaping(Data?) -> ()) {
 		if let secureImage = URL(string: imageURLString) {
 			// make request in background
 			DispatchQueue.global(qos: .background).async {
@@ -25,7 +25,7 @@ class ImageDownloader {
 						Debugger.printLog(.debug, message: "\(response?.suggestedFilename ?? secureImage.lastPathComponent)")
 
 						DispatchQueue.main.async {
-							completion(UIImage(data: data))
+							completion(data)
 						}
 					}
 					completion(nil)

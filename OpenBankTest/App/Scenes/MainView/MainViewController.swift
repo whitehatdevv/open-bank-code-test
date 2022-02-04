@@ -42,30 +42,21 @@ class MainViewController: UIViewController {
 		model?.viewWillAppear()
 	}
 
-	// MARK: - Methods
-
 }
 
 // MARK: - Configure the view
 extension MainViewController {
 
 	func setupViews() {
-
-		view.backgroundColor = .systemYellow
+		view.backgroundColor = Tokens.Colors.Background.secondary
 		navigationItem.title = "Characters"
 
+		tableView.register(CharactersTableViewCell.self, forCellReuseIdentifier: CharactersTableViewCell.identifier)
 		tableView.backgroundColor = .clear
 		tableView.delegate = self
 		tableView.dataSource = self
 
-		view.addSubview(tableView)
-		NSLayoutConstraint.activate([
-			tableView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
-			tableView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
-			tableView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
-			tableView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor)
-		])
-
+		view.fill(tableView)
 	}
 
 }

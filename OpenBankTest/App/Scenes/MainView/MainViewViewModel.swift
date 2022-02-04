@@ -45,13 +45,10 @@ class MainViewViewModel {
 	// MARK: - Methods
 	func transformData(_ dto: [CharacterDTO]) {
 		dom = dto.map { Character.init($0) }
-		.map {
-			// download image
-			ImageDownloader.downloadImage(imageURLString: $0.thumbnail.path) { image in
-				CharacterCellViewModel(title: $0.name, mainImage: image, comics: BubbleModel(item: $0.comics.available), series: BubbleModel($0.series.available), stories: BubbleModel(item: $0.stories.available), events: BubbleModel(item: $0.events.available))
-			}
+		let viewObject = dom.map {
+			CharacterCellViewModel(title: $0.name, mainImage: Data(), comics: BubbleModel(item: $0.comics.available), series: BubbleModel(item: $0.series.available), stories: BubbleModel(item: $0.stories.available), events: BubbleModel(item: $0.events.available))
 		}
-		self.state = .data(dom)
+		self.state = .data(viewObject)
 	}
 
 	func getCharacters() {
