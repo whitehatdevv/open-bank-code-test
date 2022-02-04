@@ -10,7 +10,7 @@ import UIKit
 public class CharactersTableViewCell: UITableViewCell {
 
 	// MARK: - Properties
-	var view = CharacterCellView()
+	let view = Molecules.CellViews.CharacterCell
 
 	// MARK: - Inits
 	override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
@@ -20,6 +20,11 @@ public class CharactersTableViewCell: UITableViewCell {
 	
 	required init?(coder: NSCoder) {
 		fatalError("init(coder:) has not been implemented")
+	}
+
+	// MARK: - Methods
+	public func bind(_ model: CharacterCellViewModel) {
+		view.bind(model)
 	}
 	
 }
