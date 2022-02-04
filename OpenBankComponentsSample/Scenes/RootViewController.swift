@@ -59,7 +59,7 @@ extension RootViewController: UITableViewDataSource {
 	}
 
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-		let cell = tableView.dequeueReusableCell(withIdentifier: "cell")!
+		let cell = UITableViewCell(style: .default, reuseIdentifier: "cell")
 		cell.textLabel?.text = vc[indexPath.row].name
 		return cell
 	}
