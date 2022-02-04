@@ -41,6 +41,8 @@
 		1BEE9D2E27AD55B00034CEDB /* BubblesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BEE9D2D27AD55B00034CEDB /* BubblesViewController.swift */; };
 		1BEE9D3027AD58320034CEDB /* OpenBankComponents in Frameworks */ = {isa = PBXBuildFile; productRef = 1BEE9D2F27AD58320034CEDB /* OpenBankComponents */; };
 		1BEE9D3227AD642F0034CEDB /* CharacterTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BEE9D3127AD642F0034CEDB /* CharacterTableViewController.swift */; };
+		1BEE9D3627AD705B0034CEDB /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BEE9D3527AD705B0034CEDB /* Constants.swift */; };
+		1BEE9D3827AD70650034CEDB /* ImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BEE9D3727AD70640034CEDB /* ImageDownloader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -100,6 +102,8 @@
 		1BEE9D2927AD38BC0034CEDB /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		1BEE9D2D27AD55B00034CEDB /* BubblesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubblesViewController.swift; sourceTree = "<group>"; };
 		1BEE9D3127AD642F0034CEDB /* CharacterTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterTableViewController.swift; sourceTree = "<group>"; };
+		1BEE9D3527AD705B0034CEDB /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		1BEE9D3727AD70640034CEDB /* ImageDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -227,6 +231,7 @@
 		1B586CA727A96EA2005B2E30 /* App */ = {
 			isa = PBXGroup;
 			children = (
+				1BEE9D3327AD703D0034CEDB /* Common */,
 				1B586CBA27A97158005B2E30 /* Managers */,
 				1B586CAA27A96EB2005B2E30 /* Resources */,
 				1B586CA927A96EAC005B2E30 /* Domain */,
@@ -296,7 +301,7 @@
 		1B586CBA27A97158005B2E30 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
-				1B17E4F127ABD40300C8BCD9 /* Extensions */,
+				1BEE9D3427AD70490034CEDB /* ImageDownloader */,
 				1B586CBF27A97181005B2E30 /* Debugger */,
 			);
 			path = Managers;
@@ -348,6 +353,23 @@
 				1BEE9D1F27AD38710034CEDB /* Assets.xcassets */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		1BEE9D3327AD703D0034CEDB /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				1B17E4F127ABD40300C8BCD9 /* Extensions */,
+				1BEE9D3527AD705B0034CEDB /* Constants.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		1BEE9D3427AD70490034CEDB /* ImageDownloader */ = {
+			isa = PBXGroup;
+			children = (
+				1BEE9D3727AD70640034CEDB /* ImageDownloader.swift */,
+			);
+			path = ImageDownloader;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -532,6 +554,8 @@
 				1B17E4ED27ABD25500C8BCD9 /* Environment.swift in Sources */,
 				1B17E4F327ABD41300C8BCD9 /* String+Utilities.swift in Sources */,
 				1B586CC227A971A8005B2E30 /* MainViewController.swift in Sources */,
+				1BEE9D3627AD705B0034CEDB /* Constants.swift in Sources */,
+				1BEE9D3827AD70650034CEDB /* ImageDownloader.swift in Sources */,
 				1B586CB927A97048005B2E30 /* API.swift in Sources */,
 				1B586CC427A97202005B2E30 /* MainViewViewModel.swift in Sources */,
 				1B17E4FA27ABED8800C8BCD9 /* Thumbnail.swift in Sources */,
