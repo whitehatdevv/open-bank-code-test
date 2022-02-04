@@ -88,6 +88,7 @@ extension CharacterCellView {
 		fill(mainContainer)
 
 		NSLayoutConstraint.activate([
+			title.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: Tokens.Margin.small),
 			imageView.widthAnchor.constraint(equalToConstant: Tokens.Margin.xxxlarge*1.5),
 			imageView.heightAnchor.constraint(equalToConstant: Tokens.Margin.xxxlarge*1.5)
 		])
