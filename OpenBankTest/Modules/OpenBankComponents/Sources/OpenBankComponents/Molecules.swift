@@ -7,15 +7,9 @@
 
 public enum Molecules {
 
-	public enum TableViewCell {
+	public enum TableCells {
 		public static var CharactersTableViewCell: CharactersTableViewCell {
 			return CharactersTableViewCell()
-		}
-	}
-
-	public enum CellView {
-		public static var CharacterCellView: CharacterCellView {
-			return CharacterCellView()
 		}
 	}
 
