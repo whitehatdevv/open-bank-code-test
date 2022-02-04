@@ -70,6 +70,7 @@ extension CharacterCellView {
 		contentContainer.translatesAutoresizingMaskIntoConstraints = false
 		contentContainerSubviews.forEach {
 			$0.translatesAutoresizingMaskIntoConstraints = false
+			$0.shadowed()
 			contentContainer.addArrangedSubview($0)
 		}
 
