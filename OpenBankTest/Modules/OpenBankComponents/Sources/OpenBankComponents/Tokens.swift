@@ -24,41 +24,21 @@ public enum Tokens {
 	public enum Colors {
 
 		public enum Shadow {
-			public static let primary = UIColor.custom(secureName: "shadow.primary")
-			public static let secondary = UIColor.custom(secureName: "shadow.secondary")
+			public static let primary = UIColor.black
+			public static let secondary = UIColor.white
 		}
 
 		public enum Background {
-			public static let primary = UIColor.custom(secureName: "background.primary")
-			public static let secondary = UIColor.custom(secureName: "background.secondary")
-			public static let tertiary = UIColor.custom(secureName: "background.tertiary")
-			public static let quaternary = UIColor.custom(secureName: "background.quaternary")
-		}
-
-		public enum Button {
-			public static let primary = UIColor.custom(secureName: "button.primary")
-			public static let secondary = UIColor.custom(secureName: "button.secondary")
-			public static let tertiary = UIColor.custom(secureName: "button.tertiary")
-			public static let quaternary = UIColor.custom(secureName: "button.quaternary")
+			public static let primary = UIColor.yellow
 		}
 
 		public enum Border {
-			public static let normal = UIColor.custom(secureName: "border.normal")
-			public static let error = UIColor.custom(secureName: "border.error")
-		}
-
-		public enum Element {
-			public static let primary = UIColor.custom(secureName: "element.primary")
-			public static let secondary = UIColor.custom(secureName: "element.secondary")
-			public static let tertiary = UIColor.custom(secureName: "element.tertiary")
+			public static let normal = UIColor.black
+			public static let error = UIColor.red
 		}
 
 		public enum Font {
-			public static let primary = UIColor.custom(secureName: "font.primary")
-			public static let secondary = UIColor.custom(secureName: "font.secondary")
-			public static let tertiary = UIColor.custom(secureName: "font.tertiary")
-			public static let quinary = UIColor.custom(secureName: "font.quinary")
-			public static let error = UIColor.custom(secureName: "font.error")
+			public static let primary = UIColor.white
 		}
 
 	}

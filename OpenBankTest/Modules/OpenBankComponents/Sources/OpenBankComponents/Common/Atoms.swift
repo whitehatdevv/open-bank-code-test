@@ -37,30 +37,6 @@ public enum Atoms {
 
 	}
 
-	public enum TextField {
-
-		public static var rightTextField: UITextField {
-			let textField = UITextField()
-			textField.borderStyle = .none
-			textField.font = Tokens.Typography.body1
-			textField.textAlignment = .right
-			textField.tintColor = Tokens.Colors.Font.secondary
-			textField.textColor = Tokens.Colors.Font.primary
-			return textField
-		}
-
-		public static var leftTextField: UITextField {
-			let textField = UITextField()
-			textField.borderStyle = .none
-			textField.font = Tokens.Typography.body1
-			textField.textAlignment = .left
-			textField.tintColor = Tokens.Colors.Font.secondary
-			textField.textColor = Tokens.Colors.Font.primary
-			return textField
-		}
-
-	}
-
 	public enum Text {
 
 		public enum Heading {
@@ -71,62 +47,6 @@ public enum Atoms {
 					label.numberOfLines = 0
 					label.backgroundColor = UIColor.clear
 					label.textColor = Tokens.Colors.Font.primary
-					return label
-				}
-			}
-
-			public enum Tertiary {
-				public static var bold: UILabel {
-					let label = UILabel()
-					label.numberOfLines = 0
-					label.backgroundColor = UIColor.clear
-					label.textColor = Tokens.Colors.Font.tertiary
-					return label
-				}
-			}
-
-		}
-
-		public enum Caption1 {
-
-			public enum Primary {
-				public static var medium: UILabel {
-					let label = UILabel()
-					label.numberOfLines = 0
-					label.backgroundColor = UIColor.clear
-					label.textColor = Tokens.Colors.Font.primary
-					label.font = Tokens.Typography.caption1
-					return label
-				}
-			}
-
-			public enum Secondary {
-				public static var regular: UILabel {
-					let label = UILabel()
-					label.numberOfLines = 0
-					label.backgroundColor = UIColor.clear
-					label.textColor = Tokens.Colors.Font.secondary
-					label.font = Tokens.Typography.caption1
-					return label
-				}
-
-				public static var medium: UILabel {
-					let label = UILabel()
-					label.numberOfLines = 0
-					label.backgroundColor = UIColor.clear
-					label.textColor = Tokens.Colors.Font.secondary
-					label.font = Tokens.Typography.caption1
-					return label
-				}
-			}
-
-			public enum Error {
-				public static var medium: UILabel {
-					let label = UILabel()
-					label.numberOfLines = 0
-					label.backgroundColor = UIColor.clear
-					label.textColor = Tokens.Colors.Font.error
-					label.font = Tokens.Typography.caption1
 					return label
 				}
 			}
