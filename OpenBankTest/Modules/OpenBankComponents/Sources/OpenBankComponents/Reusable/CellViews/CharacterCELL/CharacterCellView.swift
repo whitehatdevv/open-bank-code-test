@@ -14,8 +14,14 @@ public class CharacterCellView: UIView {
 	let subContainer = Atoms.Flexible.StackView.vertical
 	let imageView = UIImageView(frame: .zero)
 	let title = Atoms.Text.Heading.Primary.bold
+	let contentContainer = Atoms.Flexible.StackView.horizontal
+
+	// MARK: - Computed properties
+	lazy var contentContainerSubviews: [UIView] = {
+		[]
+	}()
 	lazy var secondContainerSubviews: [UIView] = {
-		[title]
+		[title, contentContainer]
 	}()
 	lazy var allSubviews: [UIView] = {
 		[imageView, subContainer]
@@ -52,6 +58,14 @@ extension CharacterCellView {
 			subContainer.addArrangedSubview($0)
 		}
 
+		subContainer.spacing = 20
+		contentContainer.translatesAutoresizingMaskIntoConstraints = false
+		contentContainerSubviews.forEach {
+			$0.translatesAutoresizingMaskIntoConstraints = false
+			contentContainer.addArrangedSubview($0)
+		}
+
+		mainContainer.spacing = 10
 		mainContainer.translatesAutoresizingMaskIntoConstraints = false
 		allSubviews.forEach {
 			$0.translatesAutoresizingMaskIntoConstraints = false
