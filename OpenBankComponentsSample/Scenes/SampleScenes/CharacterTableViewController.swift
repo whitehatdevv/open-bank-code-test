@@ -40,10 +40,8 @@ class CharacterTableViewController: UIViewController {
 extension CharacterTableViewController {
 
 	func setupViews() {
-
 		navigationItem.title = "Character cell"
-		view.backgroundColor = Tokens.Colors.Background.primary
-
+		view.backgroundColor = Tokens.Colors.Background.secondary
 		tableView.backgroundColor = .clear
 		tableView.dataSource = self
 		tableView.estimatedRowHeight = Tokens.Margin.xlarge

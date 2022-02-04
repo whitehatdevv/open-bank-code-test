@@ -13,7 +13,7 @@ public class CharacterCellView: UIView {
 	let mainContainer = Atoms.Flexible.StackView.horizontal
 	let subContainer = Atoms.Flexible.StackView.vertical
 	let imageView = UIImageView(frame: .zero)
-	let title = Atoms.Text.Heading.Primary.bold
+	let title = Atoms.Text.Heading.Secondary.bold
 	let contentContainer = Atoms.Flexible.StackView.horizontal
 	let bubbleComics = Molecules.Bubbles.Basic
 	let bubbleSeries = Molecules.Bubbles.Basic
@@ -66,7 +66,11 @@ extension CharacterCellView {
 			subContainer.addArrangedSubview($0)
 		}
 
-		subContainer.spacing = 20
+		subContainer.spacing = Tokens.Margin.small
+		contentContainer.spacing = Tokens.Margin.small
+		contentContainer.alignment = .trailing
+		contentContainer.distribution = .equalSpacing
+		contentContainer.layoutMargins = Tokens.Edges.inputViews
 		contentContainer.translatesAutoresizingMaskIntoConstraints = false
 		contentContainerSubviews.forEach {
 			$0.translatesAutoresizingMaskIntoConstraints = false
@@ -74,7 +78,7 @@ extension CharacterCellView {
 			contentContainer.addArrangedSubview($0)
 		}
 
-		mainContainer.spacing = 10
+		mainContainer.spacing = Tokens.Margin.small
 		mainContainer.translatesAutoresizingMaskIntoConstraints = false
 		allSubviews.forEach {
 			$0.translatesAutoresizingMaskIntoConstraints = false
@@ -82,6 +86,11 @@ extension CharacterCellView {
 		}
 
 		fill(mainContainer)
+
+		NSLayoutConstraint.activate([
+			imageView.widthAnchor.constraint(equalToConstant: Tokens.Margin.xxxlarge*1.5),
+			imageView.heightAnchor.constraint(equalToConstant: Tokens.Margin.xxxlarge*1.5)
+		])
 	}
 
 }

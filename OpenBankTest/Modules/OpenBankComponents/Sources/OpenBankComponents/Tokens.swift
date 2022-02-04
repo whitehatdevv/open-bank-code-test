@@ -30,6 +30,7 @@ public enum Tokens {
 
 		public enum Background {
 			public static let primary = UIColor.yellow
+			public static let secondary = UIColor.red
 		}
 
 		public enum Border {
