@@ -17,6 +17,10 @@ public enum Molecules {
 		public static var CharacterCell: CharacterCellView {
 			return CharacterCellView()
 		}
+
+		public static var SpinnerCellView: ScrollingCellView {
+			return ScrollingCellView()
+		}
 	}
 
 	public enum Bubbles {
