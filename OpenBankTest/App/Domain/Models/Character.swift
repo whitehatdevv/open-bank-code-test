@@ -38,7 +38,7 @@ struct Character {
 extension Character {
 
 	var asCharacterCellViewModel: CharacterCellViewModel {
-		CharacterCellViewModel(title: self.name, mainImage: Data(), comics: BubbleModel(item: self.comics.available), series: BubbleModel(item: self.series.available), stories: BubbleModel(item: self.stories.available), events: BubbleModel(item: self.events.available))
+		CharacterCellViewModel(mainImagePath: self.thumbnail.path ,title: self.name, comics: BubbleModel(item: self.comics.available), series: BubbleModel(item: self.series.available), stories: BubbleModel(item: self.stories.available), events: BubbleModel(item: self.events.available), downloader: ImageDownloader.shared.downloadImage)
 	}
 
 }

@@ -44,7 +44,11 @@ public class CharacterCellView: UIView {
 	// MARK: - Methods
 	public func bind(_ model: CharacterCellViewModel) {
 		title.text = model.title
-		imageView.image = UIImage(data: model.mainImage)
+		if let imageDownloaded = model.mainImage {
+			imageView.image = UIImage(data: imageDownloaded)
+		}else{
+			imageView.image = UIImage(named: "DefaultImage")
+		}
 		bubbleSeries.bind(model.series)
 		bubbleComics.bind(model.comics)
 		bubbleStories.bind(model.stories)

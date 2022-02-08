@@ -7,23 +7,27 @@
 
 import Foundation
 
+/// Type definitions to make the core more readable
+public typealias ConventionClosure = (Data?) -> Void
 
-public struct CharacterCellViewModel {
+public class CharacterCellViewModel {
 
 	let title: String
-	let mainImage: Data
 	let comics: BubbleModel
 	let series: BubbleModel
 	let stories: BubbleModel
 	let events: BubbleModel
+	var mainImage: Data?
 
-	public init(title: String, mainImage: Data, comics: BubbleModel, series: BubbleModel, stories: BubbleModel, events: BubbleModel) {
+	public init(mainImagePath: String, title: String, comics: BubbleModel, series: BubbleModel, stories: BubbleModel, events: BubbleModel, downloader: @escaping(_ path: String, _ completion: @escaping ConventionClosure) -> Void) {
 		self.title = title
-		self.mainImage = mainImage
 		self.comics = comics
 		self.series = series
 		self.stories = stories
 		self.events = events
+		downloader(mainImagePath, { data in
+			self.mainImage = data
+		})
 	}
 
 }
