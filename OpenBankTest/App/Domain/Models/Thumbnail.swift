@@ -10,11 +10,9 @@ import Foundation
 struct Thumbnail {
 
 	let path: String
-	let ext: String
 
 	init(_ dto: ThumbnailDTO) {
-		self.path = dto.path
-		self.ext = dto.`extension`
+		self.path = "\(dto.path).\(dto.`extension`)"
 	}
 
 }
