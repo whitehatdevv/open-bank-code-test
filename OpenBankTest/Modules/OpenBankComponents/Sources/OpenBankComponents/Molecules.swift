@@ -11,6 +11,10 @@ public enum Molecules {
 		public static var CharacterTableCell: CharactersTableViewCell {
 			return CharactersTableViewCell()
 		}
+
+		public static var SpinnerTableCell: ScrollingTableViewCell {
+			return ScrollingTableViewCell()
+		}
 	}
 
 	public enum CellViews {
